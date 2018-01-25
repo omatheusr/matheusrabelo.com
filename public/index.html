@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Matheus</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" href="./portifolio/images/icon.png"/>
+	    <link rel="stylesheet" type="text/css" href="./portifolio/css/style.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="./portifolio/css/mobile.css" media="only screen and (max-device-width: 480px)">
+        
+        <script type="text/javascript" src="./portifolio/js/jquery.js"></script>
+        <script type="text/javascript" src="./portifolio/js/jquery.parallax.min.js"></script>
+        <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#scene').parallax();
+                
+                $("#backgroundImg").load(function(){
+                    $("#background").fadeIn(1000).removeClass("hidden");
+                });
+                $("#profileImage").load(function(){
+                    $("#profileImage").fadeIn(1000).removeClass("hidden");
+                });
+                $(".cloud").load(function(){
+                    $(this).fadeIn(1000).removeClass("hidden");
+                });
+                
+                
+                $("#iconSocial_Facebook").load(function(){
+                    $(".facebook").fadeIn(1000).removeClass("hidden");
+                });
+                $("#iconSocial_Github").load(function(){
+                    $(".github").fadeIn(1000).removeClass("hidden");
+                });
+                $("#iconSocial_LinkedIn").load(function(){
+                    $(".linkedin").fadeIn(1000).removeClass("hidden");
+                });
+                $("#iconSocial_Twitter").load(function(){
+                    $(".twitter").fadeIn(1000).removeClass("hidden");
+                });
+                $("#container").scroll(function(){
+                    var opacity = 0.2 + (0.5 * $("#container").scrollTop() / $("#container").height());
+                    
+                    if (opacity > 0.7) opacity = 0.7;
+                    
+                    console.log(opacity);
+                    $("#container").css("background-color", "rgba(0,0,0,"+opacity+")");
+                });
+                $('#projects').mousemove(function(e){
+                    var leftOffset = $(this).offset().left;
+                    $('#projects').css('left', -e.clientX + leftOffset);
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="imagesload" class="hidden">
+            <img src="./portifolio/images/background2@x1.jpg" id="backgroundImg" class="hidden">
+            <img src="./portifolio/images/icon-facebook.png" id="iconSocial_Facebook" class="hidden">
+            <img src="./portifolio/images/icon-github.png" id="iconSocial_Github" class="hidden">
+            <img src="./portifolio/images/icon-linkedin.png" id="iconSocial_LinkedIn" class="hidden">
+            <img src="./portifolio/images/icon-twitter.png" id="iconSocial_Twitter" class="hidden">
+        </div>
+        <ul id="scene" class="scene fullscreen" data-scalar-y="20">
+            <li class="layer fullscreen" data-depth="0.1">
+                <div id="background" class="background image2_x1 hidden"></div>
+            </li>
+            <li class="layer fullscreen" data-depth="0.25">
+                <img src="./portifolio/images/cloud3@x1.png" class="scale-25 cloud cloud3_p1 hidden">
+            </li>
+            <li class="layer fullscreen" data-depth="0.20">
+                <img src="./portifolio/images/cloud2@x1.png" class="scale-25 cloud cloud2_p1 hidden">
+            </li>
+            <li class="layer fullscreen" data-depth="0.35">
+                <img src="./portifolio/images/cloud1@x1.png" class="scale-25 cloud cloud1_p1 hidden">
+            </li>
+        </ul>
+        <div class="dark-layer fullscreen container" id="container">
+            <div class="content c100">
+                <div class="infos">
+                    <div class="infos-img">
+                        <img src="./portifolio/images/profile1.jpg" id="profileImage" class="hidden">
+                    </div>
+                    <div class="infos-social">
+                        <a href="https://www.facebook.com/MatheusORabelo" target="_blank" class="facebook hidden" alt="Facebook">&nbsp;</a>
+                        <a href="https://br.linkedin.com/in/omatheusr" target="_blank" class="linkedin hidden" alt="LinkedIn">&nbsp;</a>
+                        <a href="https://github.com/omatheusr" target="_blank" class="github hidden" alt="GitHub">&nbsp;</a>
+                        <a href="https://twitter.com/OMatheusR" target="_blank" class="twitter hidden" alt="Twitter">&nbsp;</a>
+                    </div>
+                    <div class="infos-name">
+                        <h1>matheus</h1>
+                        <h2>rabelo</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content c55">
+                <div class="work">
+                    <ul id="projects" class="projects">
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="./portifolio/apps/minhavan/icon.png"/>
+                                </div>
+                                <h1>MinhaVan</h1>
+                                <h2>iOS</h2>
+                                <img src="./portifolio/images/icon-infos.png" class="infosicon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="./portifolio/apps/bee/icon.png"/>
+                                </div>
+                                <h1>Bee</h1>
+                                <h2>iOS</h2>
+                                <img src="./portifolio/images/icon-infos.png" class="infosicon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="./portifolio/apps/lastpuppetshow/icon.png" />
+                                </div>
+                                <h1>LastPuppetShow</h1>
+                                <h2>tvOS &amp; iOS</h2>
+                                <img src="./portifolio/images/icon-infos.png" class="infosicon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon">
+                                    <img src="./portifolio/apps/arena/icon.png"/>
+                                </div>
+                                <h1>Arena</h1>
+                                <h2>iOS</h2>
+                                <img src="./portifolio/images/icon-infos.png" class="infosicon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!--
+            <div class="content c100">
+                <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="pt_BR" data-type="vertical" data-theme="light" data-vanity="omatheusr"><a class="LI-simple-link" href='https://br.linkedin.com/in/omatheusr?trk=profile-badge'>Matheus Rabelo</a></div>
+            </div>
+-->
+        </div>
+    </body>
+</html>
