@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,900');
+
 *{
     margin:0;
     padding:0;
@@ -155,14 +157,20 @@ html, body{
 }
 
 .infos-name h1{
-    font-weight: 300;    
-    font-size: 3.5em;
+    margin: 0.1em 0 0 -0.05em;
+    font-weight: 900;    
+    font-size: 3.56em;
     line-height: 0.86em;
+    font-family: 'Lato', serif;
+    color: #fff;
 }
 .infos-name h2{
-    font-weight: 100;
-    font-size: 2em;
+    margin-left: -0.08em;
+    font-weight: 300;
+    font-family: 'Lato', serif;
+    font-size: 1.6em;
     line-height: 1em;
+    color: #D1D1D1;
 }
 
 /*WORK*/
