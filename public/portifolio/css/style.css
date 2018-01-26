@@ -131,11 +131,11 @@ html, body{
 .infos-social a{   
     text-decoration: none;
     display: block;
-    width: 30px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    margin: 5px 12px;
+    margin: 15px 12px;
     background-size: contain;
     opacity: 0.5;
     transition-duration: 0.5s;
@@ -145,6 +145,7 @@ html, body{
 }
 .facebook{
     background-image: url(../images/icon-facebook.png);
+    margin-top: 0 !important;
 }
 .github{
     background-image: url(../images/icon-github.png);
@@ -154,12 +155,13 @@ html, body{
 }
 .linkedin{
     background-image: url(../images/icon-linkedin.png);
+    margin-bottom: 0 !important;
 }
 
 .infos-name h1{
     margin: 0.1em 0 0 -0.05em;
     font-weight: 900;    
-    font-size: 3.56em;
+    font-size: 3.76em;
     line-height: 0.86em;
     font-family: 'Lato', serif;
     color: #fff;
@@ -168,7 +170,7 @@ html, body{
     margin-left: -0.08em;
     font-weight: 300;
     font-family: 'Lato', serif;
-    font-size: 1.6em;
+    font-size: 1.8em;
     line-height: 1em;
     color: #D1D1D1;
 }
