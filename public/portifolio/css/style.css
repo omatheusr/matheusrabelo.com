@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,900');
 
-*{
+* {
     margin:0;
     padding:0;
     font-family: 'Roboto Slab', serif;
@@ -14,7 +14,8 @@
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 }
-html, body{
+
+html, body {
     width: 100%;
     height: 100%;
     background-color: #000;
@@ -31,7 +32,7 @@ html, body{
 }
 
 /**/
-.container{
+.container {
     overflow-y: auto;
 }
 
@@ -39,23 +40,29 @@ html, body{
     width: 100%;
     display: block;
 }
+
 .container .c100 {
     height: 100%;
 }
+
 .container .c50 {
     height: 50%;
 }
+
 .container .c55 {
     height: 55%;
 }
+
 .hidden {
     display: none;
 }
+
 .dark-layer {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0,0,0,0.75);
 }
+
 .pdf-layer {
     width: 100%;
     height: 100%;
@@ -63,6 +70,7 @@ html, body{
     top: 0; bottom: 0; left: 0; right: 0;
     background-color: rgba(0,0,0,0.75);
 }
+
 .pdf-layer embed {
   display: flex;
   width: 50%;
@@ -72,7 +80,7 @@ html, body{
 }
 
 /*Background*/
-.background{
+.background {
     bottom: 96px;
     background-size: cover;
     position: absolute;
@@ -93,38 +101,37 @@ html, body{
 
 
 /*Cloud positions*/
-.cloud{
+.cloud {
     position: absolute;
     opacity: 0.6;
 }
-.scale-25{
+.scale-25 {
     height: 25%;
 }
-.scale-40{
+.scale-40 {
     height: 40%;
 }
-.cloud3_p1{
+.cloud3_p1 {
     top: -5%;
 }
-.cloud2_p1{
+.cloud2_p1 {
     top: 2%;
     right: -5%;
 }
-.cloud1_p1{
+.cloud1_p1 {
     right: -2%;
     top: 30%;
 }
 
-
 /*Infos*/
-.infos{
+.infos {
     width: 250px;
     position: absolute;
     top: 15%;
     left: 15%;
 }
 
-.infos div{
+.infos div {
     display: block;
     float: left;
 }
@@ -135,7 +142,7 @@ html, body{
     background-color: #FFF;
 }
 
-.infos-img img{
+.infos-img img {
     width: 180px;
     border: 4px solid #FFF;
 }
@@ -157,20 +164,20 @@ html, body{
     opacity: 1;
 }
 
-.facebook{
+.facebook {
     background-image: url(../images/icon-facebook.png);
     margin-top: 0 !important;
 }
 
-.github{
+.github {
     background-image: url(../images/icon-github.png);
 }
 
-.twitter{
+.twitter {
     background-image: url(../images/icon-twitter.png);
 }
 
-.linkedin{
+.linkedin {
     background-image: url(../images/icon-linkedin.png);
     margin-bottom: 0 !important;
 }
@@ -204,15 +211,22 @@ html, body{
 .infos-description p {
   margin-top: 10px;
   font-size: 0.8em;
+  font-family: 'Lato', serif;
 }
 
 /*WORK*/
-.work{
+.work {
     width: 100%;
     height: 200px;
     margin: auto;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
+}
+
+.work h1 {
+    font-family: 'Lato', serif;
+    color: #fff;
+    text-align: left;
 }
 
 ul#projects {
@@ -224,7 +238,6 @@ ul#projects {
 
 ul#projects li{
     display: inline-block;
-    /* width: 200px; */
     margin: 20px 15px 20px 0px;
     transition-duration: 0.25s;
     cursor: pointer;
@@ -233,7 +246,6 @@ ul#projects li{
 ul#projects li a {
     text-decoration: none;
     text-align: center;
-    /* display: inline-block; */
 }
 
 ul#projects li:hover {
@@ -243,29 +255,24 @@ ul#projects li:hover {
 ul#projects li .icon img {
     width: 100px;
     border-radius: 1.4em;
-/*    box-shadow: 0px 0px 500px #000;*/
 }
-ul#projects li h1{
+
+ul#projects li a h1 {
+    text-align: center;
     font-weight: 900;
     font-family: 'lato', 'Roboto Slab', serif;
     font-size: 1.4em;
     text-shadow: 2px 2px #000;
 }
-ul#projects li h2{
+
+ul#projects li a h2 {
+    text-align: center;
     font-weight: 300;
     font-size: 0.8em;
     color: #CECECE;
-/*    text-shadow: 2px 2px #000;*/
 }
+
 ul#projects li img.infosicon {
     width: 1.3em;
     margin: 6px 0 0 0;
 }
-
-/*
-.animate{
-    -webkit-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    -moz-animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    animation: swing 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-*/
