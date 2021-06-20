@@ -2,20 +2,20 @@
 <html lang="pt">
     <head>
         <title>Matheus</title>
-        
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="icon" href="./portifolio/images/icon.png"/>
-	    <link rel="stylesheet" type="text/css" href="./portifolio/css/style.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="./portifolio/css/style.css" media="all" />
         <link rel="stylesheet" type="text/css" href="./portifolio/css/mobile.css" media="only screen and (max-device-width: 480px)">
-        
+
         <script type="text/javascript" src="./portifolio/js/jquery.js"></script>
         <script type="text/javascript" src="./portifolio/js/jquery.parallax.min.js"></script>
         <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#scene').parallax();
-                
+
                 $("#backgroundImg").load(function(){
                     $("#background").fadeIn(1000).removeClass("hidden");
                 });
@@ -25,8 +25,8 @@
                 $(".cloud").load(function(){
                     $(this).fadeIn(1000).removeClass("hidden");
                 });
-                
-                
+
+
                 $("#iconSocial_Facebook").load(function(){
                     $(".facebook").fadeIn(1000).removeClass("hidden");
                 });
@@ -39,22 +39,29 @@
                 $("#iconSocial_Twitter").load(function(){
                     $(".twitter").fadeIn(1000).removeClass("hidden");
                 });
-                $("#container").scroll(function(){
-                    var opacity = 0.2 + (0.5 * $("#container").scrollTop() / $("#container").height());
-                    
-                    if (opacity > 0.7) opacity = 0.7;
-                    
-                    console.log(opacity);
-                    $("#container").css("background-color", "rgba(0,0,0,"+opacity+")");
-                });
+                // $("#container").scroll(function(){
+                //     var opacity = 0.2 + (0.5 * $("#container").scrollTop() / $("#container").height());
+                //
+                //     if (opacity > 0.7) opacity = 0.7;
+                //
+                //     console.log(opacity);
+                //     $("#container").css("background-color", "rgba(0,0,0,"+opacity+")");
+                // });
                 $('#projects').mousemove(function(e){
                     var leftOffset = $(this).offset().left;
                     $('#projects').css('left', -e.clientX + leftOffset);
                 });
 
+                $('#open-certificate').click(function(e){
+                    $(".pdf-layer").fadeIn(500).removeClass("hidden");
+                });
+
+                $('.pdf-layer').click(function(e){
+                    $(".pdf-layer").fadeOut(500).addClass("hidden");
+                });
             });
         </script>
-        
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113129651-1"></script>
         <script>
@@ -67,7 +74,7 @@
     </head>
     <body>
         <div id="imagesload" class="hidden">
-            <img src="./portifolio/images/background2@x1.jpg" id="backgroundImg" class="hidden">
+            <img src="./portifolio/images/background-apple.jpg" id="backgroundImg" class="hidden">
             <img src="./portifolio/images/icon-facebook.png" id="iconSocial_Facebook" class="hidden">
             <img src="./portifolio/images/icon-github.png" id="iconSocial_Github" class="hidden">
             <img src="./portifolio/images/icon-linkedin.png" id="iconSocial_LinkedIn" class="hidden">
@@ -75,7 +82,7 @@
         </div>
         <ul id="scene" class="scene fullscreen" data-scalar-y="20">
             <li class="layer fullscreen" data-depth="0.1">
-                <div id="background" class="background image2_x1 hidden"></div>
+                <div id="background" class="background image-apple-park hidden"></div>
             </li>
             <li class="layer fullscreen" data-depth="0.25">
                 <img src="./portifolio/images/cloud3@x1.png" class="scale-25 cloud cloud3_p1 hidden">
@@ -91,10 +98,10 @@
             <div class="content c100">
                 <div class="infos">
                     <div class="infos-img">
-                        <img src="./portifolio/images/profile1.jpg" id="profileImage" class="hidden">
+                        <img src="./portifolio/images/profile2.jpg" id="profileImage" class="hidden">
                     </div>
                     <div class="infos-social">
-                        <a href="https://www.facebook.com/omatheusrabelo" target="_blank" class="facebook hidden" alt="Facebook">&nbsp;</a>
+                        <!-- <a href="https://www.facebook.com/omatheusrabelo" target="_blank" class="facebook hidden" alt="Facebook">&nbsp;</a> -->
                         <a href="https://github.com/omatheusr" target="_blank" class="github hidden" alt="GitHub">&nbsp;</a>
                         <a href="https://twitter.com/OMatheusR" target="_blank" class="twitter hidden" alt="Twitter">&nbsp;</a>
                         <a href="https://br.linkedin.com/in/omatheusr" target="_blank" class="linkedin hidden" alt="LinkedIn">&nbsp;</a>
@@ -103,55 +110,34 @@
                         <h1>Matheus</h1>
                         <h2>Rabelo</h2>
                     </div>
+
+                    <div class="infos-description">
+                      <p>I'm an iOS Engineer, 26 years old.</p>
+                      <p>I've been working with iOS for over 6 years now.</p>
+                      <p>I'm a <a href="#" id="open-certificate">Certified ScrumMaster®</a> by the Scrum Alliance®.</p>
+                      <p>Currently I'm an iOS Software Engineer @ Poatek.</p>
+                      <p>Diversity & Inclusion is a huge deal for me! 💜💚💙🧡💛🖤</p>
+                      <p>Reach me out at <a href="mailto:matheus@matheusrabelo.com">matheus@matheusrabelo.com</a></p>
+                    </div>
+                    <div class="work">
+                      <ul id="projects" class="projects">
+                          <li>
+                              <a href="https://apps.apple.com/br/app/climber-indoor-climbing/id1463398955?l=en" target="_blank">
+                                  <div class="icon">
+                                      <img src="./portifolio/apps/climber/icon.png"/>
+                                      <h1>Climber</h1>
+                                      <h2>iOS</h2>
+                                  </div>
+                              </a>
+                          </li>
+                      </ul>
+                    </div>
                 </div>
             </div>
-            <div class="content c55">
-                <div class="work">
-                    <ul id="projects" class="projects">
-                        <li>
-                            <a href="https://itunes.apple.com/us/app/minha-van-controle-de-transporte-escolar/id1134692803?mt=8" target="_blank">
-                                <div class="icon">
-                                    <img src="./portifolio/apps/minhavan/icon.png"/>
-                                </div>
-                                <h1>MinhaVan</h1>
-                                <h2>iOS</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://itunes.apple.com/br/app/bee/id1149138512?l=en&mt=8" target="_blank">
-                                <div class="icon">
-                                    <img src="./portifolio/apps/bee/icon.png"/>
-                                </div>
-                                <h1>Bee</h1>
-                                <h2>iOS</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://itunes.apple.com/us/app/last-puppet-show/id1096244649" target="_blank">
-                                <div class="icon">
-                                    <img src="./portifolio/apps/lastpuppetshow/icon.png" />
-                                </div>
-                                <h1>LastPuppetShow</h1>
-                                <h2>tvOS &amp; iOS</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="icon">
-                                    <img src="./portifolio/apps/arena/icon.png"/>
-                                </div>
-                                <h1>Arena</h1>
-                                <h2>iOS</h2>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-<!--
-            <div class="content c100">
-                <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="pt_BR" data-type="vertical" data-theme="light" data-vanity="omatheusr"><a class="LI-simple-link" href='https://br.linkedin.com/in/omatheusr?trk=profile-badge'>Matheus Rabelo</a></div>
-            </div>
--->
+        </div>
+
+        <div class="pdf-layer hidden">
+          <embed src="./portifolio/images/scrum-certificate.pdf" frameborder="0">
         </div>
     </body>
 </html>

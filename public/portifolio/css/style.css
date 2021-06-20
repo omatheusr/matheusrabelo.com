@@ -6,7 +6,7 @@
     padding:0;
     font-family: 'Roboto Slab', serif;
     color: #FFF;
-    
+
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
     -khtml-user-select: none; /* Konqueror */
@@ -35,33 +35,47 @@ html, body{
     overflow-y: auto;
 }
 
-.container .content{
+.container .content {
     width: 100%;
     display: block;
 }
-.container .c100{
+.container .c100 {
     height: 100%;
 }
-.container .c50{
+.container .c50 {
     height: 50%;
 }
-.container .c55{
+.container .c55 {
     height: 55%;
 }
-.hidden{
+.hidden {
     display: none;
 }
-.dark-layer{
+.dark-layer {
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.75);
+}
+.pdf-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0,0,0,0.75);
+}
+.pdf-layer embed {
+  display: flex;
+  width: 50%;
+  height: 65%;
+  margin: auto;
+  margin-top: 5%;
 }
 
 /*Background*/
 .background{
     bottom: 96px;
     background-size: cover;
-    position: absolute;    
+    position: absolute;
     min-height: 110%;
     min-width: 110%;
     left: -5%;
@@ -69,17 +83,12 @@ html, body{
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-.image1_x1 {
-    background-image: url(../images/background1@x1.jpg);
+.image-golden-gate {
+    background-image: url(../images/background-golden-gate.jpg);
 }
-.image1_x2 {
-    background-image: url(../images/background1@x2.jpg);
-}
-.image2_x1 {
-    background-image: url(../images/background2@x1.jpg);
-}
-.image2_x2 {
-    background-image: url(../images/background2@x2.jpg);
+
+.image-apple-park {
+    background-image: url(../images/background-apple.jpg);
 }
 
 
@@ -101,7 +110,7 @@ html, body{
     top: 2%;
     right: -5%;
 }
-.cloud1_p1{    
+.cloud1_p1{
     right: -2%;
     top: 30%;
 }
@@ -110,63 +119,76 @@ html, body{
 /*Infos*/
 .infos{
     width: 250px;
-    height: 290px;
     position: absolute;
     top: 15%;
     left: 15%;
 }
+
 .infos div{
     display: block;
     float: left;
 }
+
 .infos-img {
     width: 188px;
     height: 188px;
     background-color: #FFF;
 }
+
 .infos-img img{
     width: 180px;
     border: 4px solid #FFF;
 }
-.infos-social a{   
+
+.infos-social a{
     text-decoration: none;
     display: block;
     width: 36px;
     height: 36px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    margin: 15px 12px;
+    margin: 19px 12px;
     background-size: contain;
     opacity: 0.5;
     transition-duration: 0.5s;
 }
+
 .infos-social a:hover{
     opacity: 1;
 }
+
 .facebook{
     background-image: url(../images/icon-facebook.png);
     margin-top: 0 !important;
 }
+
 .github{
     background-image: url(../images/icon-github.png);
 }
+
 .twitter{
     background-image: url(../images/icon-twitter.png);
 }
+
 .linkedin{
     background-image: url(../images/icon-linkedin.png);
     margin-bottom: 0 !important;
 }
 
-.infos-name h1{
+.infos-name {
+  margin-top: 10px;
+}
+
+.infos-name h1 {
     margin: 0.1em 0 0 -0.05em;
-    font-weight: 900;    
+    font-weight: 900;
     font-size: 3.76em;
     line-height: 0.86em;
     font-family: 'Lato', serif;
     color: #fff;
 }
-.infos-name h2{
+
+.infos-name h2 {
     margin-left: -0.08em;
     font-weight: 300;
     font-family: 'Lato', serif;
@@ -175,33 +197,50 @@ html, body{
     color: #D1D1D1;
 }
 
+.infos-description {
+  margin-top: 50px;
+}
+
+.infos-description p {
+  margin-top: 10px;
+  font-size: 0.8em;
+}
+
 /*WORK*/
 .work{
     width: 100%;
-    height: 100%;
+    height: 200px;
     margin: auto;
     text-align: center;
+    margin-top: 20px;
 }
-ul#projects{
+
+ul#projects {
     list-style-type: none;
-    overflow: auto;
+    /* overflow: auto; */
     white-space: nowrap;
-} 
+    text-align: left;
+}
+
 ul#projects li{
     display: inline-block;
-    width: 10em;
+    /* width: 200px; */
+    margin: 20px 15px 20px 0px;
     transition-duration: 0.25s;
     cursor: pointer;
-    margin: 1em 2em;
 }
-ul#projects li a{
+
+ul#projects li a {
     text-decoration: none;
-    display: inline-block;
+    text-align: center;
+    /* display: inline-block; */
 }
-ul#projects li:hover{
+
+ul#projects li:hover {
     transform: scale(1.1);
 }
-ul#projects li .icon img{
+
+ul#projects li .icon img {
     width: 100px;
     border-radius: 1.4em;
 /*    box-shadow: 0px 0px 500px #000;*/
